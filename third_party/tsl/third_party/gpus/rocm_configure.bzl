@@ -185,7 +185,7 @@ def _rocm_include_path(repository_ctx, rocm_config, bash_bin):
         inc_dirs.append(rocm_config.rocm_toolkit_path + "/include/rocprim")
         inc_dirs.append(rocm_config.rocm_toolkit_path + "/include/rocsolver")
         inc_dirs.append(rocm_config.rocm_toolkit_path + "/include/rocblas")
-
+    inc_dirs.append(rocm_config.rocm_toolkit_path + "/resource-root/include")
     inc_dirs += [realpath(repository_ctx, path) for path in inc_dirs]
     print("inc_dirs")
     print(inc_dirs)
